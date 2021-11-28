@@ -1,5 +1,6 @@
 ## Trabalho final (Paulo Santiago)
 Objetivo: Desenvolva uma ferramenta computacional responder uma pergunta da cinemática em biomecânica.
+<br>
 Pergunta: Quais outras informações podemos extrair do conjunto de dados utilizado no Encontro 4 juntamente a dados adicionais de conhecimento público
 
 Artigo utilizado na aula:

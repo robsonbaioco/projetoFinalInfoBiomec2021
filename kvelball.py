@@ -8,6 +8,7 @@ print('Prof. PAULO R. P. SANTIAGO'.center(58))
 print('LaBioCoM-EEFERP-USP'.center(58))
 print('paulosantiago@usp.br'.center(58))
 print('Created on 12/04/2020 - Updated on 01/06/2020 - Adapted on 10/11/2021'.center(58))
+print('Adapted by Robson Baioco and Gabriele Freitas'.center(58))
 print(58*'#')
 print('\n')
 '''
@@ -251,12 +252,16 @@ if __name__ == '__main__':
     #according to the fifa rules, the ball must weigh 450g
     mass = 0.450
     distvet = np.sqrt(np.sum((cc3df[-1,:] - cc3df[0,:])**2))
+
+
     
     velmed = distvet / (len(cc3df) * (1/freq)) * 3.6
     velmedSI = velmed / 3.6
     time = distvet/velmedSI
     cinetic = mass * velmedSI**2 / 2
-    plt.title(f' \n\n\nSpeed (Max = {np.round(max(vels),2)} km/h ; Mean = {np.round(velmed)}km/h); Angles (azi = {np.round(azi,1)}, elev. = {np.round(elev,1)});\n distance={np.round(distvet)}m;\n time={time}s; \n estimated speed = {np.round((distvet/time)*3.6)}km/h \n cinetic enegergy: {cinetic}J')
+    acceleration = velmedSI/time
+    force = mass * acceleration
+    plt.title(f' \n\n\nSpeed (Max = {np.round(max(vels),2)} km/h ; Mean = {np.round(velmed)}km/h); Angles (azi = {np.round(azi,1)}, elev. = {np.round(elev,1)});\n distance={np.round(distvet)}m;\n time={time}s; \n estimated speed = {np.round((distvet/time)*3.6)}km/h \n cinetic enegergy: {cinetic}J\n acceleration: {acceleration}m/s^2 \n force: {force}N')
     
     plt.show()
 
